@@ -1,0 +1,12 @@
+#datディレクトリを除外
+dat/
+
+#paperディレクトリのTeX一時ファイルを除外
+*aux
+*log
+*gz
+*latexmk
+*fls
+*dvi
+*Identifier
+*toc
