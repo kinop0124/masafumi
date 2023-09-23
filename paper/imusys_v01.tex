@@ -1,8 +1,9 @@
 \documentclass{jsarticle}
 \usepackage[dvipdfmx]{graphicx}
 \begin{document}
-In recent years, alongside experimental approaches, simulations utilizing computational tools have been employed to investigate intracellular signaling processes. Simulation research, which seeks to validate hypotheses based on experimental results, is increasingly recognized as a valuable complement to experimental studies. In this paper, we reevaluate the hypothesis that regulatory T cells are involved in the transition from inflammatory microglia to anti-inflammatory microglia from a mathematical modeling (kinetics) standpoint. 
-We denote the quantities of inflammatory microglia, anti-inflammatory microglia, and regulatory T cells as M1, M2, and Treg, respectively. Here, we describe the dynamics of M1, M2, and Treg using the following rate equations as the simplest scenario:
+近年，細胞内の伝達過程については実験とともに計算機を用いたシミュレーションが用いられることがある．実験により得られた結果に基づく仮説の検証などシミュレーション研究は実験を補う有力な手段として認識されつつある．
+そこで，ここではこれまで述べてきた炎症性マイクログリアから抗炎症性マイクログリアへの変化に制御性T細胞が関与しているという仮説を数理モデル(kinetics)の視点で見直す．細胞内の情報処理炎症性マイクログリアの量を$M_1$，抗炎症性マイクログリアの量を$M_2$，制御性T細胞の量を$T_{reg}$とする．ここではもっとも簡単な状況として，$M_1$, $M_2$, $T_{reg}$の動態を以下のrate equationで表現する
+
 \begin{eqnarray}
   \label{eqn:01}
   \frac{dM_{1}(t)}{dt} &=& \alpha f_1(t)- \beta f_2(M_1, T_{reg}) \\
@@ -16,7 +17,7 @@ We denote the quantities of inflammatory microglia, anti-inflammatory microglia,
 \begin{figure}[h]
   \centering
     \includegraphics[width=12cm,clip]{../fig/masafig01.pdf}
-        \caption{$M_1$, $M_2$, $M_1+M_2$の時系列．$\alpha=1.0$, $\beta=0.1$とし，関数形は$f_1(t):= \gamma\exp{(-\gamma T)}$，$f_2(M_1, T_{reg}):=M_1T_{reg}$とした，}
+        \caption{$M_1$, $M_2$, $M_1+M_2$の時系列．関数形は$f_1(t):= \gamma\exp{(-\gamma T)}$，$f_2(M_1, T_{reg}):=M_1T_{reg}$とし，パラメータは$\alpha=1.0$, $\beta=0.1$および$\gamma=20.0$とした．}
       \label{fig:01}
   \end{figure}
 
